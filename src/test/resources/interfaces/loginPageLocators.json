@@ -1,0 +1,21 @@
+{
+    "name": "Login Page Locators",
+    "webElements": [
+        {
+            "elementName": "usernameField",
+            "selectorValue": "//input[contains(@name,'username')]"
+        },
+        {
+            "elementName": "passwordField",
+            "selectorValue": "//input[contains(@name,'password')]"
+        },
+        {
+            "elementName": "loginBtn",
+            "selectorValue": "//button[contains(@type,'submit')]"
+        },
+        {
+            "elementName": "myActionsTab",
+            "selectorValue": "//p[contains(.,'My Actions')]"
+        }
+    ]
+}

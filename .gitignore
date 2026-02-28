@@ -1,0 +1,13 @@
+node_modules/
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+Dockerfile
+.vscode/
+Reports/
+**/.vscode/
+.env.production
+.env.staging
+docker-compose.yml
+.dockerignore
