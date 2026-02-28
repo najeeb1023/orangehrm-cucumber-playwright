@@ -24,7 +24,6 @@ export class LoginPage {
         this.email = process.env.TEST_USERNAME;
         this.password = process.env.TEST_PASSWORD;
         console.log("ENV FILE:", process.env.ENV);
-    console.log("USERNAME:", process.env.USERNAME);
     };
 
     loginPageLocators = {
