@@ -12,3 +12,4 @@ Feature: Verify if the user is able to login with correct credentials and unable
         When The user enters correct username.
         And User enters correct password.
         And User clicks on the login button.
+        Then The user is logged in.
