@@ -14,6 +14,25 @@ import dotenv from "dotenv";
         return loginPageLocators.webElements.find((element: PageElement) => element.elementName == resourceName) as PageElement;
     };
 
+export class LoginFacade {
+    private loginPage: LoginPage;
+
+    constructor(private page: Page) {
+        this.loginPage = new LoginPage(page);
+    };
+
+    async correctLoginCreds() {
+        await this.loginPage.goToLoginPage();
+        await this.loginPage.enterUsername();
+        await this.loginPage.enterPassword();
+        await this.loginPage.loginUser();
+    };
+
+    async assertSuccssfulUserLogIn() {
+        await this.loginPage.assertUserLoggedIn();
+    }
+};
+
 export class LoginPage {
 
     private email: string;
@@ -53,4 +72,5 @@ export class LoginPage {
     public async assertUserLoggedIn ():Promise<void> {
         await expect(this.loginPageLocators.myActionsTab()).toBeVisible({ timeout: 5000 });
     };
+
 };

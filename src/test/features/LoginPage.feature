@@ -5,11 +5,8 @@ Feature: Verify if the user is able to login with correct credentials and unable
     User enters their details to login.
 
     Background: User is landed on the webpage.
-        Given The user lands at the login page.
+        Given The user logs in.
     
     @LoginWithCorrectCredentials
     Scenario: User is able to login with correct credentials.
-        When The user enters correct username.
-        And User enters correct password.
-        And User clicks on the login button.
         Then The user is logged in.
