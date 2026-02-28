@@ -99,8 +99,6 @@ After(async function ({ pickle, result }) {
         fs.mkdirSync(screenshotDir, { recursive: true });
     }
 
-    console.log("📸 Taking screenshot...");
-
     const screenshot = await pageFixture.page.screenshot({
         path: `${screenshotDir}/${safeName}_${Date.now()}.png`,
         type: "png"
